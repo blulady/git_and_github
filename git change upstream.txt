@@ -1,0 +1,19 @@
+*origin has already been set, need to send it to a differnt address
+>git branch --set-url origin https://github.com/blulady/people-api.git
+
+*creating a new remote upstream
+>git remote add upstream https://github.com/automationhacks/people-api.git
+
+*then move to the issue branch you are looking to push
+>git checkout updating-to-Flask-SQLAlchemy2.5.1-and-SQLAlchemy1.4.3
+
+*then commit changes to new issue branch
+>git add .
+>git commit -m "updated to Flask SQLAchemy 2.5.1 and SQLAlchemy 1.4.3"
+
+*then push the changes up to your remote orgin repo
+>>git push -u origin updating-to-Flask-SQLAlchemy2.5.1-and-SQLAlchemy1.4.3
+
+> git remote rename origin upstream
+> git remote add origin git@github.com:greendeploy-io/test-ddp.git
+> git push -u origin main

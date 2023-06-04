@@ -1,0 +1,7 @@
+cloning a repo from bitbucket
+*create directory
+	>mkdir directory
+*cd move into directory
+	>cd directory
+*go to bit bucket repo & click on clone copy the command & link paste it into your cli
+	>git clone https://sesanger@bitbucket.org/sesanger/meetupdemo.git

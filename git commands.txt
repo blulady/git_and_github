@@ -1,0 +1,103 @@
+*use single quotes for file names, use double quotes for file names
+git init - initalize directory
+
+git add filename.py or 'file name.py'
+git add .
+*add all of your change files to a commit
+
+git commit - moves file from staging area and commits them 
+git commit -a -committs all the files in the staging area
+
+git reset /path/filename -If you have accidentally added a wrong file to the repo, or have added a file in a wrong directory, you can undo it.If you haven’t committed yet
+
+git commit -a -m "will commit files that have been changed (red)" puts it in the staging area & commits simultaneously 
+
+git add filename
+git commit — amend
+	-Add a file that you missed to add in your last commit
+
+git reset --soft HEAD~1
+git reset /path/filename
+git rm /path/filename
+git commit
+	-This will undo the commit, remove the particular file, delete the file from the repo and add a new commit in its place.
+
+git status filename.py - will tell you if file has been commited
+git log - will show log of commits and commit numbers -use the first 5/6 characters in commit identifiers in
+
+To exit git log, type “q” or “z”. Or type “h” to seek for help.
+
+git log –p
+*see only the diff introduced in each commit
+
+git reset lognumber --hard
+-will revert to the files that that lognumber had
+
+git checkout 954a47 -now you will be working with the version of the file at this point, reopen it 
+
+git checkout - 
+switch back and forth between two branches
+
+git branch -tells you what branch you have, *next to branch you are on
+
+git checkout branchname -changes the branch you are on
+
+git branch branchname -creates a new branch
+
+git branch -m neam name -changes the name of a branch
+
+git branch -D branchname -deletes the branch
+
+git branch — delete <branchname> or git branch --delete --force <branchName> -To delete a branch on your local repo
+
+git push origin — delete <branchname> -To delete a branch remotely and to create a new branch to work on
+
+git merge branchname *need to be on the branch that you want to merge into, ie be on master to merge practice into master
+
+git revert HEAD -Undo a Git Merge
+
+git revert -m 1 commit number
+
+git reset -undo whole uncommitted branch that you have just added
+
+*if there is a merge conflict just pick the version of the file you want to save (changes will be in the file and you can pick what you want and git add filname, git commit -a -m "resolving merge conflict"
+
+git config --global rebase.autoStash true -automatically stashes your work and then applies the stash after rebase is done. (you are working on a branch and you just find out your colleague has pushed some changes to the same branch, but if you are not ready to pull those changes yet)
+
+git reflog -hows you a list of all the things you have done in a project so far. Then you can go to any point in the past and fix the problem.
+
+git push --set-upstream https://github.com/blulady/MIT6001x.git master -this pushes code up to github
+
+git push origin --delete neam
+git push origin name
+	-To change a remote branch name you need to first delete the branch and then push the new one
+
+git remote set-url origin (or upstream) https://github.com/<your_GitHub_user_name>/<Repo name>.git
+
+*create the repo on github first then 
+>git remote add origin https://github.com/blulady/project_name
+>git push -u origin master
+
+*push changes up to github
+git push
+
+PS C:\Users\ssang\Documents\python project\recipes_project\recipes_project> git remote --set-url origin https://github.com/blulady/tempDjango.git
+error: unknown option `set-url'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+*push a local branch to your remote repo
+>git push --set-upstream origin new-branch-name
+
+git rm -r <directory>

@@ -1,0 +1,41 @@
+*clone a github repo into a local directory
+git clone https://github.com/<your_GitHub_user_name>/repo.git
+
+*to create a branch to pull upstream changes to & then merge into your local main branch
+git checkout -b upstream-name_your_branch --track upstream/name_of_main_branch
+
+*check what repository(ies) your local repo is pointing to
+git remote -v
+
+*if you want to directy connect your local repo with a repo that isn't in your github
+*git remote add upstream https://github.com/hackforla/website.git
+git remote add upstream https://github.com/github_name/specific_repo.git
+git fetch upstream
+	
+*if there are changes on the main branch, then switch to upstream-name_your_branch & pull, then checkout your main branch & merge your upstream branch into it
+git checkout upstream-name_your_branch
+git pull
+git checkout main_branch
+git merge usptream-name_your_branch
+
+*then you can push the changes to your mainbranch in your github repo (but if you cant just go to your github repo & refresh it- click on Fetch upstream)
+git push
+
+*now you can create a new branch for the pull request you are reviewing or the new branch you are going to put a pull request on
+*git checkout -b Jaretzbalba-add-SoGoSurvey-credit-page-3022 gh-pages
+git checkout -b new_branch_name
+
+*if you are reviewing a pull request, you can pull the branch into the local repo
+*git pull https://github.com/Jaretzbalba/website.git add-SoGoSurvey-credit-page-3022
+git pull https://github.com/user_name/repo_name.git branch_to_review_name(same name as the branch you created)
+
+*if your local branch is ahead of your remote repository you can (after checkint the name of the remote repository using >git remote -v)
+*git push -u origin main
+git push -u remote_name branch_name
+
+*if you have made changes to the remote repo & it's ahead of your local:
+	*get on the branch that you pull changes into (upstream_branch) >git checkout upstream_branch
+	*pull the remote changes into that branch #git pull remote_Name branch_name >git pull origin main
+	*move to your main branch you want to merge the upstream_branch into main >git checkout main
+	*merge your local updated upstream_branch into your main branch > git merge upstream_branch
+

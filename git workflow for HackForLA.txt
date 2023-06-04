@@ -1,0 +1,4 @@
+To checkout the the branch & view the changes in your local browser
+	git checkout -b branchname <creates the branch branchname and moves you into that branch>
+	git pull http://github.com/githubusername/projectname.git branch name <pulls the code into your new branch>
+	

@@ -1,0 +1,6 @@
+if you destroy work with a git reset --hard:
+	git reflog will list old commits after a hard reset
+	git restore can bring back a commit ref that has been "deleted" from you history with a git reset
+
+
+
